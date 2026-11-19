@@ -96,7 +96,7 @@ a.klein{color:var(--muted)}
 <script src="open-h2.js?v=1"></script>
 <script src="open-h5.js?v=1"></script>
 <script src="reken.js?v=1"></script>
-<script src="fotos.js?v=7"></script>
+<script src="fotos.js?v=8"></script>
 <script>
 var SPEL="https://economie-4m-spel.nakijker-worker.workers.dev";
 var AI="https://escape-room-ai.nakijker-worker.workers.dev";
@@ -174,7 +174,7 @@ function tekenFoto(){
   ctx.fillStyle="#1c2742";
   for(var x=0;x<m[0];x++)for(var y=0;y<m[1];y++)if((x+y)%2)ctx.fillRect(x*k,y*k,k,k);
   var img=fotoImg[S.foto];
-  if(!img){img=fotoImg[S.foto]=new Image();img.onload=tekenFoto;img.src="f/"+S.foto+".jpg?v=7";return;}
+  if(!img){img=fotoImg[S.foto]=new Image();img.onload=tekenFoto;img.src="f/"+S.foto+".jpg?v=8";return;}
   if(!img.complete)return;
   st.forEach(function(r){ctx.drawImage(img,r[0]*100,r[1]*100,r[2]*100,r[3]*100,r[0]*k,r[1]*k,r[2]*k,r[3]*k);});
   clearInterval(slotTimer);
